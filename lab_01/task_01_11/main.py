@@ -73,7 +73,7 @@ print("\nОтветы на вопросы:")
 # Выделить имя из info["фио"]
 name = info ['фио'].split () [1]
 # Начинается на гласную? (True/False)
-starts_with_vowel = ord (name[0]) in {ord('А'), ord('Е'), ord ('Ё'), ord ('И'), ord ('О'), ord ('У'), ord ('Ы'), ord ('Э'), ord ('Ю'), ord ('Я')}
+starts_with_vowel = name[0] in ('А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я')
 print("* мое имя начинается на гласную букву:", starts_with_vowel)
 
 # Выделить месяц из info["дата_рождения"]
