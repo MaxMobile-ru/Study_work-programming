@@ -1,0 +1,33 @@
+
+# Задание task_02_12.
+#
+# Выполнил: Ставецкий Максим Иванович
+# Группа: ЦИБ-251
+
+
+
+a = int (input ('a = '))
+b = int (input ('b = '))
+
+num = min (a, b)
+while num <= max (a, b):
+    print (num, end=' ')
+    num += 1
+
+num = max (a, b)
+print ()
+while num >= min (a, b):
+    print (num)
+    num -= 1
+
+# --------------
+# Пример вывода:
+#
+# a = 1
+# b = 5
+# 1 2 3 4 5
+# 5
+# 4
+# 3
+# 2
+# 1
