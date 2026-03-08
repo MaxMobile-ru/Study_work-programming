@@ -6,12 +6,12 @@
 
 
 
-p = int (input ('Грузоподъемность грузовика (кг.) = '))
+p = float (input ('Грузоподъемность грузовика (кг.) = '))
 n = int (input ('Количество предметов = '))
 
 total = 0
 for i in range (1, n + 1):
-    mass = int (input (f'Масса {i}-го предмета (кг.) = '))
+    mass = float (input (f'Масса {i}-го предмета (кг.) = '))
     total += mass
 if p >= total:
     print ('Да')
