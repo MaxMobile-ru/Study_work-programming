@@ -1,0 +1,41 @@
+# Программирование на языке высокого уровня (Python).
+# https://www.yuripetrov.ru/edu/python
+# Задание task_02_13.
+#
+# Выполнил: Ставецкий Максим Иванович
+# Группа: ЦИБ-251
+# E-mail: stavetskiimi099@mgpu.ru
+
+
+a = int (input ('a = '))
+b = int (input ('b = '))
+
+n_sum = 0
+n_mult = 1
+n_avg_geom = 1
+n_avg_geom_counter = 0
+for i in range (a, b + 1):
+    n_sum += i
+    n_mult *= i
+    if i % 2 == 1:
+        n_avg_geom *= i
+        n_avg_geom_counter += 1
+
+
+n_avg = n_sum / (b + 1 - a)
+n_avg_geom = n_avg_geom ** (1/n_avg_geom_counter)
+
+print("Сумма =", n_sum)
+print("Произведение =", n_mult)
+print("Среднее арифметическое = {:.2f}".format(n_avg))
+print("Среднее геометрическое нечетных чисел = {:.2f}".format(n_avg_geom))
+
+# --------------
+# Пример вывода:
+#
+# a = 1
+# b = 5
+# Сумма = 15
+# Произведение = 120
+# Среднее арифметическое = 3.00
+# Среднее геометрическое нечетных чисел = 2.47
