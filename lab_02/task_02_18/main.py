@@ -17,7 +17,7 @@ for i in sentence:
         continue
     if i in 'аеёиоуыэюя':
         count_gl += 1
-    elif i in 'бвгджзйклмнпрстйфхцчшщ':
+    elif i in 'бвгджзйклмнпрстфхцчшщ':
         count_sogl += 1
     
 
