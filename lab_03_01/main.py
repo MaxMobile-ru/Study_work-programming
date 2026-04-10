@@ -10,18 +10,42 @@
 
 
 def has_digits(sentence):
-    """!!!"""
-    # Удалите комментарий и допишите код
+    """Определяет наличие цифр.
+    
+    Параметры:
+        sentence (str): текст предложения.
+    Результат:
+        bool: True - да, False - нет."""
+    example = '0123456789'
+    for item in example:
+        if item in sentence:
+            return True
+    return False
 
 
 def sentences_with_digits_count(sentences):
-    """!!!."""
-    # Удалите комментарий и допишите код
+    """Вычисляет количество предложений с цифрой.
+    
+    Параметры:
+        sentences (str): текст предложений.
+    Результат:
+        counter (int): искомое количество предложений."""
+    lst1 = sentences.split ('|')
+    counter = 0
+    for item in lst1:
+        if has_digits (item):
+            counter += 1
+    return counter
 
 
-n = # Удалите комментарий и допишите код
+n = int (input ('Введите количество предложений: '))
+text = ''
 
-# Удалите комментарий и допишите код
+for i in range (1, n + 1):
+    entire = input (f'Введите предложение №{i}:\n')
+    text += entire + '|'
+
+print ('Предложений с цифрой =', sentences_with_digits_count (text))
 
 # --------------
 # Пример вывода:
